@@ -1,4 +1,4 @@
-package assessment.parkinglot.controller;
+package assessment.parkinglot.controller.dto;
 
 public class VehicleToPark {
     private String type;

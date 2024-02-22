@@ -10,6 +10,12 @@
 
 ## [0.0.3] - 2024-02-22 17:30
 ### Added
+- Fix in logic
+
+![img_4.png](img_4.png)
+
+## [0.0.3] - 2024-02-22 17:30
+### Added
 - H2 activation
 - Enable repositories
 - Creating repository

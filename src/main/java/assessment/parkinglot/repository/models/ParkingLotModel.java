@@ -19,6 +19,14 @@ public class ParkingLotModel {
         this.createdTime = LocalDateTime.now();
     }
 
+    public ParkingLotModel() {
+
+    }
+
+    public String getVehicle() {
+        return vehicle;
+    }
+
     @Override
     public String toString() {
         return "ParkingLotModel(id = " + id + ", vehicle = " + vehicle +

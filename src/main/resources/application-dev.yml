@@ -1,9 +1,10 @@
 parking-lot:
-  spaces:
+  spots:
     total: 25
     motorcycle: 5
-    car-van: 20
-    # There is no information for motorcycle parking lot so I will suppose that we have 5 free spaces
+    compact-car: 10
+    regular-car: 10
+    min-space-for-van: 3
 
 spring:
   datasource:

@@ -8,8 +8,25 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ParkingLotRepository extends JpaRepository<ParkingLotModel, Long> {
+    @Query(
+    "SELECT SUM(CASE WHEN VEHICLE = 'VAN' THEN 3 ELSE 1 END) FROM ParkingLotModel"
+    )
+    Long countTotalOccupiedSpaces();
+
+    @Query(
+            "SELECT SUM(CASE " +
+                    "WHEN VEHICLE = 'VAN' THEN 3 " +
+                    "WHEN VEHICLE = 'CAR' THEN 1 " +
+                    "ELSE 0 " +
+                    "END) AS total_count " +
+                    "FROM ParkingLotModel"
+    )
+    Long countTotalOccupiedSpacesByCarAndVan();
 
     @Query("SELECT COUNT(*) FROM ParkingLotModel WHERE vehicle = :type")
-    Long countTotalOccupiedSpaces(@Param("type") String type);
+    Long countTotalVehiclesByType(@Param("type") String type);
+
+    @Query("SELECT COUNT(*) FROM ParkingLotModel WHERE vehicle in ('CAR', 'VAN')")
+    Long countTotalVehiclesCarVan();
 }
 
