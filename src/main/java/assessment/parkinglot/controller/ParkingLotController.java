@@ -1,6 +1,7 @@
 package assessment.parkinglot.controller;
 
 import assessment.parkinglot.enums.ParkingLotAllowedTypes;
+import assessment.parkinglot.repository.models.ParkingLotModel;
 import assessment.parkinglot.service.ParkingLotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,8 +22,8 @@ public class ParkingLotController {
     public String parkVehicle(@RequestBody VehicleToPark vehicle) {
         try {
             parkingLotService.validate(vehicle.getType());
-            parkingLotService.parkVehicle(vehicle);
-            return "Vehicle was parked. Vehicle: " + vehicle;
+            ParkingLotModel parkingLotModel = parkingLotService.parkVehicle(vehicle);
+            return "Vehicle was parked. Vehicle: " + parkingLotModel;
         } catch (Exception exception) {
             return "Vehicle was not parked. There was an issue." +
                     "\nVehicle: " + vehicle +

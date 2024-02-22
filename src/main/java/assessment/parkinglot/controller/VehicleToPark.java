@@ -6,4 +6,9 @@ public class VehicleToPark {
     public String getType() {
         return type;
     }
+
+    @Override
+    public String toString() {
+        return "VehicleToPark(type=" + type + ")";
+    }
 }
