@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.5] - 2024-02-22 20:30
+### Added
+- Added Postman collection
+
 ## [0.0.4] - 2024-02-22 20:20
 ### Added
 - Fix in logic
