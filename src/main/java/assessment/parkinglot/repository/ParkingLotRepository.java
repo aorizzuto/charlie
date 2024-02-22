@@ -25,8 +25,5 @@ public interface ParkingLotRepository extends JpaRepository<ParkingLotModel, Lon
 
     @Query("SELECT COUNT(*) FROM ParkingLotModel WHERE vehicle = :type")
     Long countTotalVehiclesByType(@Param("type") String type);
-
-    @Query("SELECT COUNT(*) FROM ParkingLotModel WHERE vehicle in ('CAR', 'VAN')")
-    Long countTotalVehiclesCarVan();
 }
 

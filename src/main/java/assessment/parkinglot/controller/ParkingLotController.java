@@ -18,6 +18,11 @@ public class ParkingLotController {
     @Autowired
     ParkingLotService parkingLotService;
 
+    /**
+     * Park vehicle
+     * @param vehicle to park
+     * @return message success or fail
+     */
     @PostMapping("/park")
     public ResponseEntity<String> parkVehicle(@RequestBody VehicleToPark vehicle) {
         try {
@@ -34,6 +39,11 @@ public class ParkingLotController {
         }
     }
 
+    /**
+     * remove vehicle from parking lot
+     * @param id of the vehicle
+     * @return message success or fail
+     */
     @DeleteMapping("/vehicle/{id}")
     public ResponseEntity<String> vehicleLeave(@PathVariable Long id) {
         try {
@@ -49,6 +59,10 @@ public class ParkingLotController {
         }
     }
 
+    /**
+     * give the spots remaining
+     * @return message with information
+     */
     @GetMapping("/spotsremaining")
     public ResponseEntity<String> spotsRemaining() {
         try {
@@ -62,6 +76,11 @@ public class ParkingLotController {
         }
     }
 
+    /**
+     * spots remaining by type of vehicle
+     * @param vehicle to search
+     * @return message success or fail
+     */
     @GetMapping("/spotsremaining/{vehicle}")
     public ResponseEntity<String> spotsRemainingByType(@PathVariable String vehicle) {
         try {

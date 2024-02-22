@@ -17,16 +17,16 @@ import static assessment.parkinglot.enums.ParkingLotAllowedTypes.*;
 public class ParkingLotService {
 
     @Value("${parking-lot.spots.total}")
-    private Long totalSpots;
+    private long totalSpots;
 
     @Value("${parking-lot.spots.motorcycle}")
-    private Long totalMotorcycleSpots;
+    private long totalMotorcycleSpots;
 
     @Value("${parking-lot.spots.compact-car}")
-    private Long totalCompactSpots;
+    private long totalCompactSpots;
 
     @Value("${parking-lot.spots.regular-car}")
-    private Long totalRegularSpots;
+    private long totalRegularSpots;
 
     @Value("${parking-lot.spots.min-space-for-van}")
     private int minSpacesForVan;

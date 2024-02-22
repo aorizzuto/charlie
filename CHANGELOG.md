@@ -1,16 +1,11 @@
 # Changelog
 
-### TODO
-- Classes info
-- Logger
-- Unit testing
-  - Controller
-  - Service
-  - Repository
-
-## [0.0.3] - 2024-02-22 17:30
+## [0.0.4] - 2024-02-22 20:20
 ### Added
 - Fix in logic
+- 18 tests
+- controller tests
+- service tests
 
 ![img_4.png](img_4.png)
 
